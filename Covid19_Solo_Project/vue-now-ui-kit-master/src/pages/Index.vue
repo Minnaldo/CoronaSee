@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="page-header clear-filter" filter-color="blue">
+    <!-- <div class="page-header clear-filter" filter-color="blue">
       <parallax
         class="page-header-image"
         style="background-image:url('img/header.jpg')"
@@ -44,8 +44,9 @@
           </div>
         </div>
       </div>
-    </div>
-    <basic-elements></basic-elements>
+    </div> -->
+    <DaumMap></DaumMap>
+    <!-- <basic-elements></basic-elements>
     <navigation></navigation>
     <tabs-section></tabs-section>
     <progress-pagination></progress-pagination>
@@ -71,9 +72,10 @@
     </div>
     <signup-form></signup-form>
     <examples-section></examples-section>
-    <download-section></download-section>
+    <download-section></download-section> -->
   </div>
 </template>
+
 <script>
 import { Parallax } from '@/components';
 import BasicElements from './components/BasicElementsSection';
@@ -88,9 +90,21 @@ import NucleoIconsSection from './components/NucleoIconsSection';
 import SignupForm from './components/SignupForm';
 import ExamplesSection from './components/ExamplesSection';
 import DownloadSection from './components/DownloadSection';
+import DaumMap from './DaumMap';
 
 export default {
   name: 'index',
+  data() {
+    return {
+      msg:"index"
+    }
+  },
+  mounted() {
+
+  },
+  methods : {
+
+  },
   bodyClass: 'index-page',
   components: {
     Parallax,
@@ -105,7 +119,8 @@ export default {
     NucleoIconsSection,
     SignupForm,
     ExamplesSection,
-    DownloadSection
+    DownloadSection,
+    DaumMap,
   }
 };
 </script>

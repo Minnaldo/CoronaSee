@@ -1,14 +1,10 @@
 <template>
-  <navbar
-    position="fixed"
-    type="primary"
-    :transparent="transparent"
-    :color-on-scroll="colorOnScroll"
-    menu-classes="ml-auto"
-  >
-    <template slot-scope="{ toggle, isToggled }">
-      <router-link v-popover:popover1 class="navbar-brand" to="/">
-        FCWS
+  <navbar position="fixed" type="primary" :transparent="transparent" :color-on-scroll="colorOnScroll"
+    menu-classes="ml-auto">
+
+    <!-- <template slot-scope="{ toggle, isToggled }"> -->
+      <router-link v-popover:popover1 class="navbar-brand" to="/" style="font-size:20px">
+        코로나씨 (Corona_See)
       </router-link>
       <el-popover
         ref="popover1"
@@ -17,22 +13,36 @@
         width="200"
         trigger="hover"
       >
-        <div class="popover-body">
-          Fishing Community Web Service
+        <!-- <div class="popover-body"> -->
+        <div class="">
+          코로나19 (Covid-19)
         </div>
       </el-popover>
-    </template>
+    <!-- </template> -->
+
+
     <template slot="navbar-menu">
+      
       <li class="nav-item">
-        <a
+        <nav-link to="/" class="nav-link" style="color:white;">
+          <i class="now-ui-icons location_map-big"></i>
+          <p>Map</p>
+        </nav-link>
+      </li>
+
+      <li class="nav-item">
+        <!-- <a
           class="nav-link"
           href="https://www.creative-tim.com/product/vue-now-ui-kit"
           target="_blank"
-        >
+        > -->
+        <nav-link to="/" class="nav-link" style="color:white;">
           <i class="now-ui-icons arrows-1_cloud-download-93"></i>
-          <p>Download</p>
-        </a>
+          <p>Map</p>
+        </nav-link>
+        <!-- </a> -->
       </li>
+
       <drop-down
         tag="li"
         title="Components"
