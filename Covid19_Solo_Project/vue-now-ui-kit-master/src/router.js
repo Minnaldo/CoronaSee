@@ -6,6 +6,7 @@ import Login from './pages/Login.vue';
 import Profile from './pages/Profile.vue';
 import MainNavbar from './layout/MainNavbar.vue';
 import MainFooter from './layout/MainFooter.vue';
+import DaumMap from './pages/DaumMap.vue';
 
 Vue.use(Router);
 
@@ -18,6 +19,15 @@ export default new Router({
       components: { default: Index, header: MainNavbar, footer: MainFooter },
       props: {
         header: { colorOnScroll: 400 },
+        footer: { backgroundColor: 'black' }
+      }
+    },
+    {
+      path: '/daummap',
+      name: 'daummap',
+      components: { default: DaumMap, header: MainNavbar },
+      props: {
+        header: { colorOnScroll: 0 },
         footer: { backgroundColor: 'black' }
       }
     },
